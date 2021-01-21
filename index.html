@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>🎉 New years dinner 🎉</title>
+
+	<link
+		rel="stylesheet"
+		href="style.css">
+</head>
+<body>
+
+<div id="foreground"></div>
+
+<div id="intro-container">
+	<div class="drape drape--left"></div>
+	<div class="drape drape--right"></div>
+
+	<div class="intro-container__text-container">
+		<button
+			type="button"
+			class="intro-container__text-button"
+			onclick="slideOpen()">
+
+			Click to see this years gift!
+		</button>
+	</div>
+</div>
+
+
+<div id="page-container">
+	<div id="gifts-container">
+		<div class="gift">
+			<div class="gift__title">
+				A <a class="gift__link" target="_blank" href="https://srprs.me/">srprs.me</a> voucher
+			</div>
+
+			<img
+				src="img/plane.png"
+				alt="Airplane"
+				class="gift__image">
+
+			<div class="gift__text">
+				With Srprs me you can go on holiday to a mystery destination, this could be your well deserved city trip/holiday after all this craziness is over!
+			</div>
+		</div>
+
+		<span>OR</span>
+
+		<div class="gift">
+			<div class="gift__title">
+				An Amazon gift voucher
+			</div>
+
+			<img
+				src="img/voucher.png"
+				alt="Voucher"
+				class="gift__image">
+
+			<div class="gift__text">
+				To buy gadget, book or something else you always wanted.
+			</div>
+		</div>
+	</div>
+
+	<div id="qrcode-container">
+		<img
+			src="img/qr.png"
+			alt="https://docs.google.com/forms/d/1KtW41TdKiynIUrS53J6jt_vi8LlWGK6ZDVz6qjuqDGo/edit"
+			class="qrcode">
+
+		<div class="qrcode-text">
+			Scan the QR-code or go to <a href="https://docs.google.com/forms/d/1KtW41TdKiynIUrS53J6jt_vi8LlWGK6ZDVz6qjuqDGo/edit" class="qrcode-text__link">this link</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	function slideOpen () {
+		var elems = document.querySelectorAll('.drape');
+
+		elems.forEach(
+			elem => elem.classList.add('drape--out'),
+		);
+
+		document
+			.querySelector('.intro-container__text-container')
+			.style.display = 'none';
+
+		setTimeout(
+			() => {
+				document
+					.getElementById('intro-container')
+					.style.display = 'none';
+			},
+			1000,
+		);
+	}
+</script>
+
+</body>
+</html>
