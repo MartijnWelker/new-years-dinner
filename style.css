@@ -9,6 +9,10 @@ body {
     text-shadow: 1px 1px black;
 }
 
+a {
+    color: inherit;
+}
+
 body {
     background-image: url("img/stage.jpg");
     background-size: cover;
@@ -86,12 +90,10 @@ body {
     visibility: hidden;
     width: 800px;
     margin: 0 auto;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 175px 0;
+    padding: 350px 0;
 }
 
 #gifts-container {
@@ -111,21 +113,20 @@ body {
     width: 150px;
 }
 
-#qrcode-container {
+#link-container {
     margin-top: 75px;
 }
 
-.qrcode {
-    width: 200;
-    height: 200;
+.docs-link {
+    border-radius: 10px;
+    min-width: 200px;
+    background: #d3232c;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 5px 5px 0 black;
 }
 
-.qrcode-text {
-    text-align: center;
-    margin-top: 8px;
-}
-
-.gift__link,
-.qrcode-text__link {
-    color: inherit;
+.docs-link:hover {
+    background: #cf464d;
 }
