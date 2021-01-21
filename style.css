@@ -7,6 +7,7 @@ body {
     font-family: Arial;
     color: white;
     text-shadow: 1px 1px black;
+    font-size: 2vh;
 }
 
 a {
@@ -52,12 +53,12 @@ body {
     height: 100%;
     width: 50%;
     transition: transform cubic-bezier(0.45, 0.25, 0.60, 0.95) 1s;
-    background-position-y: 20%;
 }
 
 .drape--left {
     background-image: url("img/left.png");
     right: 50%;
+    background-position: right 20%;;
 }
 
 .drape--left.drape--out {
@@ -67,6 +68,7 @@ body {
 .drape--right {
     background-image: url("img/right.png");
     right: 0;
+    background-position: left 20%;;
 }
 
 .drape--right.drape--out {
@@ -81,7 +83,7 @@ body {
 .intro-container__text-button {
     border: none;
     background: none;
-    font-size: 24px;
+    font-size: 4vh;
     cursor: pointer;
     color: inherit;
 }
@@ -93,7 +95,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 350px 0;
+    padding: 25vh 0;
 }
 
 #gifts-container {
@@ -105,25 +107,31 @@ body {
     align-items: center;
 }
 
+@media (max-width: 1000px) {
+    #gifts-container {
+        grid-template-columns: 1fr;
+        grid-gap: 75px;
+    }
+}
+
 .gift__title {
-    font-size: 35px;
+    font-size: 5vh;
 }
 
 .gift__image {
     width: 150px;
 }
 
-#link-container {
-    margin-top: 75px;
-}
-
 .docs-link {
+    margin-top: 75px;
     border-radius: 10px;
+    width: auto;
+    white-space: nowrap;
     min-width: 200px;
     background: #d3232c;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 3vh;
     box-shadow: 5px 5px 0 black;
 }
 
